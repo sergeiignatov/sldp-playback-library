@@ -1,2 +1,4 @@
-# sldp-playback-library
-An Android library for SLDP playback
+# SLDP Playback Library for Android
+A library for embedding SLDP playback into Android apps.
+
+Coming soon.
