@@ -1,6 +1,6 @@
 plugins {
-    id("maven-publish")
     alias(libs.plugins.android.library)
+    id("maven-publish")
 }
 
 java.toolchain {
@@ -30,4 +30,17 @@ android {
 
 dependencies {
     implementation(libs.androidx.annotations)
+}
+
+configure<PublishingExtension> {
+    publications.create<MavenPublication>("sldp-playback-library") {
+        groupId = "com.github.sergeiignatov"
+        artifactId = "sldp-playback-library"
+        version = "0.0.1-alpha01"
+        pom.packaging = "aar"
+        artifact("$buildDir/outputs/aar/sldp-playback-library-release.aar")
+    }
+    repositories {
+        mavenLocal()
+    }
 }
