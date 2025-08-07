@@ -1,5 +1,10 @@
 plugins {
+    id("maven-publish")
     alias(libs.plugins.android.library)
+}
+
+java.toolchain {
+    languageVersion.set(JavaLanguageVersion.of(17))
 }
 
 android {
@@ -20,10 +25,6 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
-    }
-
-    buildFeatures {
-        buildConfig = true
     }
 }
 
