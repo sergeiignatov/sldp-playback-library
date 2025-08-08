@@ -44,3 +44,9 @@ configure<PublishingExtension> {
         mavenLocal()
     }
 }
+
+afterEvaluate {
+    tasks.withType(PublishToMavenRepository::class.java) {
+        dependsOn(tasks.assemble)
+    }
+}
