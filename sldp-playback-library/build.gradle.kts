@@ -36,7 +36,6 @@ dependencies {
 }
 
 tasks.register<Jar>("sourcesJar") {
-    //    from(android.sourceSets.getByName("main").java.sourceFiles)
     from(project.the<BaseExtension>().sourceSets["main"].java.srcDirs)
     archiveClassifier.set("sources")
 }
