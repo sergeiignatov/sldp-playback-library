@@ -6,10 +6,6 @@ plugins {
     id("maven-publish")
 }
 
-java.toolchain {
-    languageVersion.set(JavaLanguageVersion.of(17))
-}
-
 android {
     namespace = "com.softvelum.sldp"
     compileSdk = 36
